@@ -1,0 +1,19 @@
+#calScreen{
+	height: 100px;
+	width: 400px;
+	border: 2px solid black;
+}
+
+#panel{
+	height: 630px;
+	width: 420px;
+	border: 2px solid black;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#panel>li{
+	height: 100px;
+	width: 100px;
+	border: 2px solid black;
+}
