@@ -8,3 +8,12 @@ function show(num){
 	str = str + String(num);
 	document.getElementsByName("numScreen")[0].value = str;
 }
+
+function ac(){
+	document.getElementsByName("numScreen")[0].value = 0;
+}
+
+function plus(){
+	operate = 1;
+	
+}
