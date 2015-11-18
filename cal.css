@@ -1,4 +1,6 @@
-
+body{
+	background-color: grey;
+}
 
 #calScreen{
 	height: 100px;
