@@ -12,13 +12,17 @@ function show(num){
 	document.getElementsByName("numScreen")[0].value = str;
 }
 
-//
-
-
 //AC
 function allClear(){
 	document.getElementsByName("numScreen")[0].value = 0;
 	num = 0 , result = 0 ,calculate = 0, operate = 0, numshow = "0"; 
+}
+
+function reverse(){
+	operate = 1;
+	num = document.getElementsByName("numScreen")[0].value;
+	num =- Number(num);
+	document.getElementsByName("numScreen")[0].value = num;
 }
 
 //+ - * /
