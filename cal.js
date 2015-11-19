@@ -1,6 +1,7 @@
 var num = 0 , result = 0 , numshow = "0"; 
 var operate = 0; //判断输入状态的标志:输入运算符时，下一次输入数据就会清屏。
 
+//获取及更新屏幕数字
 function show(num){
 	var str = String(document.getElementsByName("numScreen")[0].value);//获得屏幕上显示的数字。
 	if (str == "0" || operate !=0) {
@@ -11,15 +12,30 @@ function show(num){
 	num = 0;
 }
 
-function ac(){
+//
+
+
+//AC
+function allClear(){
 	document.getElementsByName("numScreen")[0].value = 0;
 }
 
+//+
 function plus(){
 	operate = 1;//对数字进行了加操作，标记为1，当再次输入数字时会清屏。
 	num = document.getElementsByName("numScreen")[0].value;
 }
 
+//-
+function minus()
+
+//*
+function times()
+
+//\
+function devide()
+
+//=
 function equal(){
 	operate = 0;
 	numshow = document.getElementsByName("numScreen")[0].value;
