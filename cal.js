@@ -69,7 +69,7 @@ function equal(){
 		num1 = document.getElementsByName("numScreen")[0].value;
 		switch(calculate){
 			case 1:
-			result = Number(result) + Number(num1);
+			result = result + Number(num1);
 			break;
 			case 2:
 			result = Number(num2) - num1;
