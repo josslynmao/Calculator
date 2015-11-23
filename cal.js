@@ -34,54 +34,49 @@ function percentage(){
 }
 
 function plus(){
-	num1 = document.getElementsByName("numScreen")[0].value;
 	operate = 1;
-	calculate = 1;
 	equal();
+	calculate = 1;//将运算符置于等号操作后，每按一个运算符，都是计算上一个运算并显示。
 }
 
 function minus(){
 	operate = 1;
-	calculate = 2;
 	equal();
+	calculate = 2;
 }
 
 function times(){
 	operate = 1;
-	calculate = 3;
 	equal();
+	calculate = 3;
 }
 
 function devide(){
 	operate = 1;
-	calculate = 4;
 	equal();
+	calculate = 4;
 }
 
 //=
 function equal(){
 	operate = 1;
+	num1 = document.getElementsByName("numScreen")[0].value;
 	if (result == null) {
 		result = Number(num1);
-		document.getElementsByName("numScreen")[0].value = result;
 	}
 	else{
-		num1 = document.getElementsByName("numScreen")[0].value;
 		switch(calculate){
 			case 1:
 			result = result + Number(num1);
 			break;
 			case 2:
-			result = Number(num2) - num1;
-			num1 = result;
+			result = result - Number(num1);
 			break;
 			case 3:
-			result = Number(num1) * Number(num2);
-			num1 = result;
+			result = result * Number(num1);
 			break;
 			case 4:
-			result = Number(num2) / Number(num2);
-			num1 = result;
+			result = result / Number(num1);
 			break;
 			default:
 			alert("Yeah!");
