@@ -1,4 +1,4 @@
-var  calculate = 0 , numshow = "0"; 
+var  calculate = 0 , numshow = "0" , num1 = 0 , num2; 
 var  operate = 0; //判断输入状态的标志，来控制何时清屏:输入运算符时，下一次输入数据就会清屏。
 
 //获取及更新屏幕数字
@@ -33,34 +33,50 @@ function percentage(){
 	document.getElementsByName("numScreen")[0].value = num;
 }
 
-//+ - * /
-function calculateNumber(cal){
-	operate = 1;//对数字进行了加操作，标记为1，当再次输入数字时会清屏。
-	calculate = cal;
-	num = document.getElementsByName("numScreen")[0].value;
-	document.getElementsByName("numScreen")[0].value = result;
+function plus(){
+	operate = 1;
+	calculate = 1;
+	equal();
+}
+
+function minus(){
+	operate = 1;
+	calculate = 2;
+	equal();
+}
+
+function times(){
+	operate = 1;
+	calculate = 3;
+	equal();
+}
+
+function devide(){
+	operate = 1;
+	calculate = 4;
+	equal();
 }
 
 //=
 function equal(){
 	operate = 1;
-	numshow = document.getElementsByName("numScreen")[0].value;
+	num2 = document.getElementsByName("numScreen")[0].value;
 	switch(calculate){
 		case 1:
-		result = Number(num) + Number(numshow);
-		num = result;
+		result = num1 + Number(num2);
+		num1 = result;
 		break;
 		case 2:
-		result = Number(num) - Number(numshow);
-		num = result;
+		result = Number(num2) - num1;
+		num1 = result;
 		break;
 		case 3:
-		result = Number(num) * Number(numshow);
-		num = result;
+		result = Number(num1) * Number(num2);
+		num1 = result;
 		break;
 		case 4:
-		result = Number(num) / Number(numshow);
-		num = result;
+		result = Number(num2) / Number(num2);
+		num1 = result;
 		break;
 		default:
 		alert("Yeah!");
