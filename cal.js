@@ -1,4 +1,4 @@
-var  calculate = 0 , numshow = "0" , num1 , result; 
+var  calculate = 0 , numshow = "0" , num1 , result, num; 
 var  operate = 0; //判断输入状态的标志，来控制何时清屏:输入运算符时，下一次输入数据就会清屏。
 
 //获取及更新屏幕数字
@@ -15,12 +15,13 @@ function show(num){
 //AC
 function allClear(){
 	document.getElementsByName("numScreen")[0].value = 0;
-	num = 0 , result = 0 , calculate = 0, operate = 0 , numshow = "0"; 
+	num1 = 0 , result = null , num = null , calculate = 0, operate = 0 , numshow = "0"; 
 }
 
 //取反
 function reverse(){
 	operate = 1;
+	equal();
 	num = document.getElementsByName("numScreen")[0].value;
 	num =- Number(num);
 	document.getElementsByName("numScreen")[0].value = num;
@@ -29,8 +30,11 @@ function reverse(){
 //百分比
 function percentage(){
 	operate = 1;
+	equal();
+	num = document.getElementsByName("numScreen")[0].value;
 	num = Number(num) * 0.01;
 	document.getElementsByName("numScreen")[0].value = num;
+
 }
 
 function plus(){
