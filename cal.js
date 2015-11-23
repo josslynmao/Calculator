@@ -1,10 +1,10 @@
-var  calculate = 0 , numshow = "0" , num1 , num2; 
+var  calculate = 0 , numshow = "0" , num1 , result; 
 var  operate = 0; //判断输入状态的标志，来控制何时清屏:输入运算符时，下一次输入数据就会清屏。
 
 //获取及更新屏幕数字
 function show(num){
 	var str = String(document.getElementsByName("numScreen")[0].value);//获得屏幕上显示的数字。
-	if ((str == "0" && num != 0) || operate !=0) {//再想想
+	if (str == "0" || operate !=0) {//再想想
 		str = "";//若获得的屏幕上的数字为零(起始状态)；或者对数字进行了操作，则进行清屏。
 		operate = 0;//清屏后操作符置0
 	}
@@ -34,7 +34,7 @@ function percentage(){
 }
 
 function plus(){
-	num2 = document.getElementsByName("numScreen")[0].value;
+	num1 = document.getElementsByName("numScreen")[0].value;
 	operate = 1;
 	calculate = 1;
 	equal();
@@ -61,15 +61,15 @@ function devide(){
 //=
 function equal(){
 	operate = 1;
-	if (num1 == null) {
-		num1 = Number(num2);
-		document.getElementsByName("numScreen")[0].value = num1;
+	if (result == null) {
+		result = Number(num1);
+		document.getElementsByName("numScreen")[0].value = result;
 	}
 	else{
+		num1 = document.getElementsByName("numScreen")[0].value;
 		switch(calculate){
 			case 1:
-			result = num1 + Number(num2);
-			num1 = result;
+			result = Number(result) + Number(num1);
 			break;
 			case 2:
 			result = Number(num2) - num1;
