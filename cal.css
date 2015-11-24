@@ -35,8 +35,10 @@ h1{
 	border-radius: 6px;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-around;
+	align-items: space-around;
 	background-color: #E2C6AC;
+	display: flex;
 }
 
 #panel>li{
