@@ -59,7 +59,6 @@ h1{
 
 .pic{
 	height: 25em;
-	margin: 5px;
 }
 
 #blank{
@@ -95,4 +94,30 @@ h1{
 	position:absolute;
 	top:0;
 	color:#fff;
+}
+
+@keyframes type{
+	from{width: 0px;}
+}
+
+@keyframes blink{
+	50%{border-color: transparent;}
+}
+
+.tips{
+	color: white;
+	font: bold 100% Consolas, Monaco, monospace;
+	border-right: .1em solid;
+	width: 14em; /* fallback */
+	width: 45ch; /* # of chars */
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	top: 235px;
+	left: 650px;
+	border-right: 2px solid white;
+	overflow: hidden;
+	animation: type 10s steps(45, end), 
+	           blink .5s step-end infinite alternate;
 }
