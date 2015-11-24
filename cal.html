@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta charset="UTF-8">
 	<title>My Calculator</title>
 	<link type="text/css" rel="stylesheet" href="cal.css"/>
+	<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <body>
-
-	<div id="conventer">
-	<img class="pic" src="img/snowman.png" alt="雪人"/>
-	<img class="pic" src="img/麋鹿.png" alt="麋鹿"/>
-	<form>
-		<div id="panel">
+	<div id="conventer" >
+		<form id="panel">
 			<input name="numScreen" value="0" id="blank"/>
 			<li onclick="allClear()"></br>AC</li>
 			<li onclick="reverse()"></br>+/-</li>
@@ -32,12 +29,37 @@
 		    <li class="width" onclick="show(0)"></br>0</li>
 		    <li onclick="show('.')"></br>.</li>
 		    <li onclick="equal()"></br>=</li>
+		</form>
+		<div class="snowbg" id="note">
+				<img class="pic" src="img/麋鹿.png" alt="麋鹿"/>
 		</div>
-	</form>
-	<img class="pic" src="img/圣诞老人.png" alt="圣诞老人"/>
-	<img class="pic" src="img/姜饼人.png" alt="姜饼人"/>
-</div>
-<embed src="#" hidden="true" autostart="true" loop="true">
+	</div>
+
+
+	<p>Designed By <a href="http://www.maohuifeng.com">Mao Huifeng</a></p>
 	<script language="javascript" src="cal.js"> </script> 
+
+	<script>
+	$(function(){
+		var d="<div class='snow'>❅<div>"
+		setInterval(function(){
+			var f=$(document).width();
+			var e=Math.random()*f-100;
+			var o=0.3+Math.random();
+			var fon=10+Math.random()*30;
+			var l = e - 100 + 200 * Math.random();
+			var k=2000 + 5000 * Math.random();
+			$(d).clone().appendTo(".snowbg").css({
+				left:e+"px",
+				opacity:o,
+				"font-size":fon,
+			}).animate({
+				top:"400px",
+				left:l+"px",
+				opacity:0.1,
+			},k,"linear",function(){$(this).remove()})
+		},200)
+	})
+	</script>
 </body>
 </html>
