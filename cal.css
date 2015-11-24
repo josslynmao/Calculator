@@ -1,5 +1,25 @@
+@font-face{
+	font-family: DJB;
+	src: url('DJB Jenna.ttf');
+}
+
 body{
-	background-color: grey;
+	background-color: #C7FFC9;
+	padding: 0px;
+}
+
+form{
+	background-color: white;
+}
+
+h1{
+	font-family: DJB;
+}
+
+#conventer{
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
 }
 
 #calScreen{
@@ -11,14 +31,45 @@ body{
 #panel{
 	height: 630px;
 	width: 420px;
-	border: 2px solid black;
+	border: 5px solid #956134;
+	border-radius: 6px;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
+	background-color: #E2C6AC;
 }
 
 #panel>li{
 	height: 100px;
 	width: 100px;
-	border: 2px solid black;
+	border: 2px solid #E2C6AC;
 	list-style: none;
+	border-radius: 10px;
+	text-align: center;
+	font-size: 2em;
+	color: white;
+	background-color: #956134;
+}
+
+.width{
+	padding-right: 105px;
+}
+
+.pic{
+	height: 220px;
+	margin: 5px;
+}
+
+#blank{
+	height: 90px;
+	width: 390px;
+	font-size: 3em;
+	border:1px solid transparent;
+	text-align: right;
+	background-color: #E2C6AC;
+}
+
+#panel>li:hover{
+	background-color: #E2C6AC;
+	border: 2px solid white;
 }

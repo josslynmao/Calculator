@@ -6,11 +6,13 @@
 	<link type="text/css" rel="stylesheet" href="cal.css"/>
 </head>
 <body>
+	<h1>X-MAS Calculator</h1>
+	<div id="conventer">
+	<img class="pic" src="img/snowman.png" alt="雪人"/>
+	<img class="pic" src="img/麋鹿.png" alt="麋鹿"/>
 	<form>
-		<div id="calScreen">
-			<input name="numScreen" value="0"/>
-		</div>
 		<div id="panel">
+			<input name="numScreen" value="0" id="blank"/>
 			<li onclick="allClear()">AC</li>
 			<li onclick="reverse()">+/-</li>
 		    <li onclick="percentage()">%</li>
@@ -27,11 +29,14 @@
 		    <li onclick="show(2)">2</li>
 		    <li onclick="show(3)">3</li>
 		    <li onclick="plus()">+</li>
-		    <li onclick="show(0)">0</li>
+		    <li class="width" onclick="show(0)">0</li>
 		    <li onclick="show('.')">.</li>
 		    <li onclick="equal()">=</li>
 		</div>
 	</form>
+	<img class="pic" src="img/圣诞老人.png" alt="圣诞老人"/>
+	<img class="pic" src="img/姜饼人.png" alt="姜饼人"/>
+</div>
 	<script language="javascript" src="cal.js"> </script> 
 </body>
 </html>
